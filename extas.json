@@ -1,0 +1,15 @@
+{
+  "name": "extas/quality-indexes",
+  "package_classes": [
+    {
+      "interface": "extas\\interfaces\\quality\\indexes\\IIndexRepository",
+      "class": "extas\\components\\quality\\indexes\\IndexRepository"
+    }
+  ],
+  "plugins": [
+    {
+      "class": "extas\\components\\plugins\\PluginInstallQualityIndexes",
+      "stage": "extas.install"
+    }
+  ]
+}
