@@ -38,11 +38,11 @@ class PluginUserDataAppliedIndex extends Plugin
         if (!$existed) {
             $indexRepo->create($index);
             $output->writeln([
-                '<success>Qualification index for user "' . $user->getName() . '" created</success>'
+                '<info>Qualification index for user "' . $user->getName() . '" created</info>'
             ]);
         } else {
             $output->writeln([
-                '<warning>Qualification index for user "' . $user->getName() . '" already exists</warning>'
+                '<comment>Qualification index for user "' . $user->getName() . '" already exists</comment>'
             ]);
         }
     }
