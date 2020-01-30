@@ -3,7 +3,8 @@
   "description": "Quality index package",
   "require": {
     "jeyroik/extas-base": "*",
-    "jeyroik/extas-installer": "*"
+    "jeyroik/extas-installer": "*",
+    "symfony/console": "*"
   },
   "autoload": {
     "psr-4": {

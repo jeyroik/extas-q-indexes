@@ -10,6 +10,10 @@
     {
       "class": "extas\\components\\plugins\\PluginInstallQualityIndexes",
       "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\quality\\PluginUserDataAppliedIndex",
+      "stage": "quality.user.data.applied"
     }
   ]
 }
