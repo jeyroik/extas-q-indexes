@@ -33,7 +33,10 @@ class PluginUserDataAppliedIndex extends Plugin
             ->setIndexValue($indexValue)
             ->setUserName($user->getName());
 
-        $existed = $indexRepo->one($index->__toArray());
+        $existed = $indexRepo->one([
+            Index::FIELD__USER_NAME => $index->getUserName(),
+            Index::FIELD__INDEX_MONTH => $index->getIndexMonth()
+        ]);
 
         if (!$existed) {
             $indexRepo->create($index);
