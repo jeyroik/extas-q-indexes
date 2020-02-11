@@ -28,7 +28,7 @@ class PluginUserDataAppliedIndex extends Plugin
         $indexRepo = SystemContainer::getItem(IIndexRepository::class);
         $indexValue = $user->getQualificationIndex();
         $index = new Index();
-        $index->setIndexMonth(date('Ym'))
+        $index->setIndexMonth((int) date('Ym'))
             ->setIndexTimestamp(time())
             ->setIndexValue($indexValue)
             ->setUserName($user->getName());
