@@ -2,8 +2,8 @@
   "name": "jeyroik/extas-q-indexes",
   "description": "Quality index package",
   "require": {
-    "jeyroik/extas-base": "*",
-    "jeyroik/extas-installer": "*",
+    "jeyroik/extas-base": "2.*",
+    "jeyroik/extas-installer": "2.*",
     "symfony/console": "*"
   },
   "autoload": {
