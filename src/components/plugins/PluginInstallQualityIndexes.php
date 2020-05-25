@@ -12,9 +12,9 @@ use extas\interfaces\quality\indexes\IIndexRepository;
  */
 class PluginInstallQualityIndexes extends PluginInstallDefault
 {
-    protected $selfUID = Index::FIELD__ID;
-    protected $selfRepositoryClass = IIndexRepository::class;
-    protected $selfSection = 'quality_indexes';
-    protected $selfName = 'quality index';
-    protected $selfItemClass = Index::class;
+    protected string $selfUID = Index::FIELD__ID;
+    protected string $selfRepositoryClass = IIndexRepository::class;
+    protected string $selfSection = 'quality_indexes';
+    protected string $selfName = 'quality index';
+    protected string $selfItemClass = Index::class;
 }

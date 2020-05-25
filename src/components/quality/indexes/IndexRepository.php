@@ -12,9 +12,8 @@ use extas\interfaces\quality\indexes\IIndexRepository;
  */
 class IndexRepository extends Repository implements IIndexRepository
 {
-    protected $itemClass = Index::class;
-    protected $name = 'quality_indexes';
-    protected $pk = Index::FIELD__ID;
-    protected $scope = 'extas';
-    protected $idAs = Index::FIELD__ID;
+    protected string $itemClass = Index::class;
+    protected string $name = 'quality_indexes';
+    protected string $pk = Index::FIELD__ID;
+    protected string $scope = 'extas';
 }
