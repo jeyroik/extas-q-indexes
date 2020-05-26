@@ -2,7 +2,7 @@
   "name": "extas/quality-indexes",
   "package_classes": [
     {
-      "interface": "extas\\interfaces\\quality\\indexes\\IIndexRepository",
+      "interface": "indexRepository",
       "class": "extas\\components\\quality\\indexes\\IndexRepository"
     }
   ],
@@ -14,6 +14,16 @@
     {
       "class": "extas\\components\\plugins\\quality\\PluginUserDataAppliedIndex",
       "stage": "quality.user.data.applied"
+    }
+  ],
+  "extensions": [
+    {
+      "class": "extas\\components\\extensions\\ExtensionRepositoryGet",
+      "interface": "extas\\interfaces\\extensions\\IExtensionRepositoryGet",
+      "subject": "*",
+      "methods": [
+        "indexRepository"
+      ]
     }
   ]
 }

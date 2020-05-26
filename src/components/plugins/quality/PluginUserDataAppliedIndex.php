@@ -3,13 +3,14 @@ namespace extas\components\plugins\quality;
 
 use extas\components\plugins\Plugin;
 use extas\components\quality\indexes\Index;
-use extas\components\SystemContainer;
 use extas\interfaces\quality\indexes\IIndexRepository;
 use extas\interfaces\quality\users\IUser;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class PluginUserDataAppliedIndex
+ *
+ * @method indexRepository()
  *
  * @package extas\components\plugins\quality
  * @author jeyroik@gmail.com
@@ -25,7 +26,7 @@ class PluginUserDataAppliedIndex extends Plugin
         /**
          * @var $indexRepo IIndexRepository
          */
-        $indexRepo = SystemContainer::getItem(IIndexRepository::class);
+        $indexRepo = $this->indexRepository();
         $indexValue = $user->getQualificationIndex();
         $index = new Index();
         $index->setIndexMonth((int) date('Ym'))
