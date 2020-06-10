@@ -1,19 +1,18 @@
 <?php
-namespace extas\components\plugins;
+namespace extas\components\plugins\install;
 
 use extas\components\quality\indexes\Index;
-use extas\interfaces\quality\indexes\IIndexRepository;
 
 /**
- * Class PluginInstallQualityIndexes
+ * Class InstallQualityIndexes
  *
- * @package extas\components\plugins
+ * @package extas\components\plugins\install
  * @author jeyroik@gmail.com
  */
-class PluginInstallQualityIndexes extends PluginInstallDefault
+class InstallQualityIndexes extends InstallSection
 {
     protected string $selfUID = Index::FIELD__ID;
-    protected string $selfRepositoryClass = IIndexRepository::class;
+    protected string $selfRepositoryClass = 'qualityIndexRepository';
     protected string $selfSection = 'quality_indexes';
     protected string $selfName = 'quality index';
     protected string $selfItemClass = Index::class;
