@@ -2,14 +2,18 @@
   "name": "extas/quality-indexes",
   "package_classes": [
     {
-      "interface": "indexRepository",
+      "interface": "qualityIndexRepository",
       "class": "extas\\components\\quality\\indexes\\IndexRepository"
     }
   ],
   "plugins": [
     {
-      "class": "extas\\components\\plugins\\PluginInstallQualityIndexes",
-      "stage": "extas.install"
+      "class": "extas\\components\\plugins\\install\\InstallQualityIndexes",
+      "stage": "extas.install.section.quality_indexes"
+    },
+    {
+      "class": "extas\\components\\plugins\\uninstall\\UninstallQualityIndexes",
+      "stage": "extas.uninstall.section.quality_indexes"
     },
     {
       "class": "extas\\components\\plugins\\quality\\PluginUserDataAppliedIndex",
@@ -22,7 +26,7 @@
       "interface": "extas\\interfaces\\extensions\\IExtensionRepositoryGet",
       "subject": "*",
       "methods": [
-        "indexRepository"
+        "qualityIndexRepository"
       ]
     }
   ]
